@@ -21,6 +21,14 @@ body{
     cursor: pointer;
 }
 
+.red-button{
+    background: #E10000;
+    border-radius: 5px;
+    padding: 20px;
+    font-weight: 600;
+    color: #FFF;
+}
+
 .logo{
     position: relative;
     z-index: 1000;
@@ -187,14 +195,30 @@ body{
         font-size: 22px;
         line-height: 36px;
     }
-    &__button{
+    &__buttons{
         position: relative;
         z-index: 300;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        max-width: 564px;
+    }
+    &__button{
+        font-size: 24px;
+        &.white-button{
+            width: 272px;
+            padding: 18px 20px;
+        }
+        &.main-button{
+            width: 564px;
+        }
     }
     &__video{
+        width: 100%;
+        height: 100%;
         position: absolute;
         z-index: 200;
-        bottom: -10%;
+        top: 6%;
         right: -25%;
     }
 }
@@ -400,6 +424,39 @@ body{
     }
     }
 
+    .about{
+        padding: 160px 0;
+        &__content{
+            max-width: 420px;
+        }
+        &__title{
+            font-size: 70px;
+        }
+        &__text{
+            font-size: 18px;
+            line-height: 170%;
+            margin: 24px 0 32px;
+        }
+        &__buttons{
+            max-width: 100%;
+        }
+        &__button{
+            font-size: 16px;
+            &.white-button{
+                padding: 12px 20px;
+                width: 200px;
+            }
+            &.main-button{
+                padding: 14px;
+                width: 420px;
+            }
+        }
+        &__video{
+            top: 4%;
+            right: -20%;
+        }
+    }
+
     .footer{
         height: 900px;
         &__top{
@@ -561,6 +618,48 @@ body{
         }
     }
 
+    .about{
+        padding: 80px 0;
+        &__inner{
+            width: 100%;
+            justify-content: center;
+        }
+        &__content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 600px;
+        }
+        &__title{
+            font-size: 50px;
+        }
+        &__text{
+            font-size: 16px;
+            margin: 20px 0 0;
+            text-align: justify;
+        }
+        &__video{
+            position: relative;
+            top: 0;
+            right: 0;
+        }
+        &__buttons{
+            max-width: 520px;
+        }
+        &__button{
+            font-size: 24px;
+            padding: 18px;
+            line-height: 100%;
+            &.main-button{
+                width: 520px;
+            }
+            &.white-button{
+                padding: 13px;
+                width: 250px;
+            }
+        }
+    }
+
     .footer{
         height: 1000px;
         &__inner{
@@ -645,6 +744,30 @@ body{
                 margin-left: 20px;
             }
         }
+    }
+
+    .about{
+        &__content{
+            align-items: flex-start;
+            width: 100%;
+            position: relative;
+        }
+        &__title{
+            font-size: 40px;
+        }
+        &__buttons{
+            display: block;
+            max-width: 100%;
+        }
+        &__button{
+            margin: 10px 0;
+            &.main-button{
+                width: 100%;
+            }
+            &.white-button{
+                width: 100%;
+            }
+        }       
     }
 
     .footer{
