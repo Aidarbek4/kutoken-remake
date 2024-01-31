@@ -112,6 +112,53 @@ body{
 .home{
     background: #242428;
     height: 100vh;
+    overflow: hidden;
+}
+
+.banner{
+    position: relative;
+    background: #E10000;
+    overflow: hidden;
+    z-index: 500;
+
+    &__wrapper{
+        padding: 37px 50px;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        animation: moveToLeft 6s ease-in-out infinite alternate;
+    }
+
+    @keyframes moveToLeft {
+        from { transform: translate3d(0, 0, 0); }
+        to { transform: translate3d(-157%, 0, 0); }
+    }
+    
+    @keyframes moveToRight {
+        from { transform: translate3d(-157%, 0, 0); }
+        to { transform: translate3d(0, 0, 0); }
+    }
+
+    &__text{
+        font-size: 136px;
+        font-weight: 700;
+        line-height: 146px;
+        letter-spacing: -2.72px;
+        color: #E8E8E8;
+
+        &+&{
+            margin-left: 62px;
+        }
+
+        &:nth-of-type(2n){
+            color: #E10000; /* красный цвет текста */
+            text-shadow:
+            -1px -1px 0 #fff,   /* верхняя левая тень */
+             1px -1px 0 #fff,   /* верхняя правая тень */
+            -1px 1px 0 #fff,    /* нижняя левая тень */
+             1px 1px 0 #fff; 
+        }
+    }
 }
 
 .footer{
@@ -289,6 +336,29 @@ body{
         }
     }
 
+    .banner{
+        &__wrapper{
+            padding: 25px 35px;
+        }
+        &__text{
+            font-size: 80px;
+            line-height: 120%;
+            &+&{
+                margin-left: 45px;
+            }
+        }
+        
+    @keyframes moveToLeft {
+        from { transform: translate3d(0, 0, 0); }
+        to { transform: translate3d(-112%, 0, 0); }
+    }
+    
+    @keyframes moveToRight {
+        from { transform: translate3d(-112%, 0, 0); }
+        to { transform: translate3d(0, 0, 0); }
+    }
+    }
+
     .footer{
         &__top{
             margin-top: 56px;
@@ -433,7 +503,19 @@ body{
             max-width: 540px;
         }
     }
-    
+
+    .banner{
+        &__wrapper{
+            padding: 20px 30px;
+        }
+        &__text{
+            font-size: 60px;
+            &+&{
+                margin-left: 30px;
+            }
+        }
+    }
+
     .footer{
         &__top{
             top: 100%;
@@ -511,6 +593,16 @@ body{
         &__button{
             font-size: 14px;
             width: 100%;
+        }
+    }
+
+    .banner{
+        &__text{
+            font-size: 40px;
+            line-height: 100%;
+            &+&{
+                margin-left: 20px;
+            }
         }
     }
 
