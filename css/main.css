@@ -265,6 +265,130 @@ body {
   right: -25%;
 }
 
+.contacts {
+  padding: 150px 0;
+  background: #1A1A1D;
+}
+.contacts__title {
+  font-size: 60px;
+  line-height: 130%;
+  font-weight: 700;
+  color: #FFF;
+}
+.contacts__text {
+  margin: 10px 0 50px;
+  font-size: 28px;
+  line-height: 40px;
+  color: #FFF;
+}
+.contacts__app {
+  padding: 54px 54px 60px;
+  background: #FFD400;
+  color: #272727;
+}
+.contacts__app-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contacts__app-title {
+  font-size: 44px;
+  line-height: 120%;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.contacts__app-text {
+  font-size: 22px;
+  line-height: 100%;
+}
+.contacts__app-data {
+  font-size: 22px;
+  line-height: 100%;
+}
+.contacts__app-data + .contacts__app-data {
+  margin-top: 16px;
+}
+.contacts__app-fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 22px;
+  margin: 56px 0;
+}
+.contacts__app-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.contacts__app-label {
+  font-size: 24px;
+  line-height: 110%;
+  margin-bottom: 18px;
+}
+.contacts__app-input {
+  background-color: #fff;
+  padding: 22px 25px 18px;
+  color: #272727;
+}
+.contacts__app-input::-webkit-input-placeholder {
+  font-size: 25px;
+  line-height: 135%;
+  color: #A9A9A9;
+}
+.contacts__app-input::-moz-placeholder {
+  font-size: 25px;
+  line-height: 135%;
+  color: #A9A9A9;
+}
+.contacts__app-input:-ms-input-placeholder {
+  font-size: 25px;
+  line-height: 135%;
+  color: #A9A9A9;
+}
+.contacts__app-input::-ms-input-placeholder {
+  font-size: 25px;
+  line-height: 135%;
+  color: #A9A9A9;
+}
+.contacts__app-input::placeholder {
+  font-size: 25px;
+  line-height: 135%;
+  color: #A9A9A9;
+}
+.contacts__app-button {
+  position: relative;
+  text-align: center;
+  font-weight: 600;
+  width: 100%;
+  padding: 28px 42px;
+  font-size: 25px;
+  line-height: 135%;
+  background: #272727;
+  color: #FFF;
+}
+.contacts__app-button::after {
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 32px;
+  background-image: url(../assets/images/arrow-right.png);
+  background-position: center;
+  background-size: cover;
+}
+
 .footer {
   background-color: #000;
   height: 1080px;
@@ -531,6 +655,61 @@ body {
     top: 4%;
     right: -20%;
   }
+  .contacts {
+    padding: 80px 0;
+  }
+  .contacts__title {
+    font-size: 45px;
+    line-height: 120%;
+  }
+  .contacts__text {
+    font-size: 24px;
+    margin: 5px 0 30px;
+  }
+  .contacts__app {
+    padding: 40px 25px;
+  }
+  .contacts__app-title {
+    font-size: 32px;
+  }
+  .contacts__app-text {
+    font-size: 18px;
+    margin-top: 6px;
+  }
+  .contacts__app-data {
+    font-size: 18px;
+  }
+  .contacts__app-data + .contacts__app-data {
+    margin-top: 10px;
+  }
+  .contacts__app-fields {
+    margin: 42px 0;
+  }
+  .contacts__app-label {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .contacts__app-input {
+    padding: 16px 20px 12px;
+  }
+  .contacts__app-input::-webkit-input-placeholder {
+    font-size: 20px;
+  }
+  .contacts__app-input::-moz-placeholder {
+    font-size: 20px;
+  }
+  .contacts__app-input:-ms-input-placeholder {
+    font-size: 20px;
+  }
+  .contacts__app-input::-ms-input-placeholder {
+    font-size: 20px;
+  }
+  .contacts__app-input::placeholder {
+    font-size: 20px;
+  }
+  .contacts__app-button {
+    padding: 20px 32px;
+  }
   .footer {
     height: 900px;
   }
@@ -733,6 +912,52 @@ body {
     padding: 13px;
     width: 250px;
   }
+  .contacts__title {
+    font-size: 36px;
+    text-align: center;
+  }
+  .contacts__text {
+    font-size: 20px;
+    margin: 0 0 54px;
+    text-align: center;
+  }
+  .contacts__app {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .contacts__app-text {
+    display: none;
+  }
+  .contacts__app-desc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .contacts__app-fields {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 32px 0;
+  }
+  .contacts__app-input {
+    padding: 16px 16px 12px;
+  }
+  .contacts__app-label {
+    margin-bottom: 8px;
+  }
+  .contacts__app-button {
+    font-size: 16px;
+    padding: 20px;
+  }
+  .contacts__app-button::after {
+    width: 24px;
+    height: 24px;
+  }
   .footer {
     height: 1000px;
   }
@@ -854,6 +1079,51 @@ body {
   }
   .about__button.white-button {
     width: 100%;
+  }
+  .contacts__title {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .contacts__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .contacts__app {
+    padding: 20px 16px;
+  }
+  .contacts__app-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .contacts__app-data {
+    font-size: 16px;
+  }
+  .contacts__app-data + .contacts__app-data {
+    margin-top: 16px;
+  }
+  .contacts__app-label {
+    font-size: 16px;
+  }
+  .contacts__app-input {
+    border-radius: 5px;
+  }
+  .contacts__app-input::-webkit-input-placeholder {
+    font-size: 14px;
+  }
+  .contacts__app-input::-moz-placeholder {
+    font-size: 14px;
+  }
+  .contacts__app-input:-ms-input-placeholder {
+    font-size: 14px;
+  }
+  .contacts__app-input::-ms-input-placeholder {
+    font-size: 14px;
+  }
+  .contacts__app-input::placeholder {
+    font-size: 14px;
+  }
+  .contacts__app-button {
+    border-radius: 5px;
   }
   .footer__navbar-item + .footer__navbar-item {
     margin: 15px 0;

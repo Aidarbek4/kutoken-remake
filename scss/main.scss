@@ -223,6 +223,98 @@ body{
     }
 }
 
+.contacts{
+    padding: 150px 0;
+    background: #1A1A1D;
+    
+    &__title{
+        font-size: 60px;
+        line-height: 130%;
+        font-weight: 700;
+        color: #FFF;
+    }
+    &__text{
+        margin: 10px 0 50px;
+        font-size: 28px;
+        line-height: 40px;
+        color: #FFF;
+    }
+    &__app{
+        padding: 54px 54px 60px;
+        background: #FFD400;
+        color: #272727;
+        &-desc{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-title{
+            font-size: 44px;
+            line-height: 120%;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        &-text{
+            font-size: 22px;
+            line-height: 100%;
+        }
+        &-data{
+            font-size: 22px;
+            line-height: 100%;
+            &+&{
+                margin-top: 16px;
+            }
+        }
+        &-fields{
+            display: flex;
+            gap: 22px;
+            margin: 56px 0;
+        }
+        &-field{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        &-label{
+            font-size: 24px;
+            line-height: 110%;
+            margin-bottom: 18px;
+        }
+        &-input{
+            background-color: #fff;
+            padding: 22px 25px 18px;
+            color: #272727;
+            &::placeholder{
+                font-size: 25px;
+                line-height: 135%;
+                color: #A9A9A9;               
+            }
+        }
+        &-button{
+            position: relative;
+            text-align: center;
+            font-weight: 600;
+            width: 100%;
+            padding: 28px 42px;
+            font-size: 25px;
+            line-height: 135%;
+            background: #272727;
+            color: #FFF;
+
+
+            &::after{
+                position: absolute;
+                content: "";
+                width: 32px;
+                height: 32px;
+                background-image: url(../assets/images/arrow-right.png);
+                background-position: center;
+                background-size: cover;
+            }
+        }
+    }
+}
+
 .footer{
     background-color: #000;
     height: 1080px;
@@ -457,6 +549,50 @@ body{
         }
     }
 
+    .contacts{
+        padding: 80px 0;
+        &__title{
+            font-size: 45px;
+            line-height: 120%;
+        }
+        &__text{
+            font-size: 24px;
+            margin: 5px 0 30px;
+        }
+        &__app{
+            padding: 40px 25px;
+            &-title{
+                font-size: 32px;
+            }
+            &-text{
+                font-size: 18px;
+                margin-top: 6px;
+            }
+            &-data{
+                font-size: 18px;
+                &+&{
+                    margin-top: 10px;
+                }
+            }
+            &-fields{
+                margin: 42px 0;
+            }
+            &-label{
+                font-size: 18px;
+                margin-bottom: 12px;
+            }
+            &-input{
+                padding: 16px 20px 12px;
+                &::placeholder{
+                    font-size: 20px;
+                }
+            }
+            &-button{
+                padding: 20px 32px;
+            }
+        }
+    }
+
     .footer{
         height: 900px;
         &__top{
@@ -660,6 +796,47 @@ body{
         }
     }
 
+    .contacts{
+        &__title{
+            font-size: 36px;
+            text-align: center;
+        }
+        &__text{
+            font-size: 20px;
+            margin: 0 0 54px;
+            text-align: center;
+        }
+        &__app{
+            max-width: 640px;
+            margin: 0 auto;
+            &-text{
+                display: none;
+            }
+            &-desc{
+                flex-direction: column;
+                align-items: start;
+            }
+            &-fields{
+                flex-direction: column;
+                margin: 32px 0;
+            }
+            &-input{
+                padding: 16px 16px 12px;
+            }
+            &-label{
+                margin-bottom: 8px;
+            }
+            &-button{
+                font-size: 16px;
+                padding: 20px;
+                &::after{
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+
     .footer{
         height: 1000px;
         &__inner{
@@ -768,6 +945,42 @@ body{
                 width: 100%;
             }
         }       
+    }
+
+    .contacts{
+        &__title{
+            font-size: 32px;
+            line-height: 48px;
+        }
+        &__text{
+            font-size: 16px;
+            line-height: 20px;
+        }
+        &__app{
+            padding: 20px 16px;
+            &-title{
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            &-data{
+                font-size: 16px;
+                &+&{
+                    margin-top: 16px;
+                }
+            }
+            &-label{
+                font-size: 16px;
+            }
+            &-input{
+                border-radius: 5px;
+                &::placeholder{
+                    font-size: 14px;
+                }
+            }
+            &-button{
+                border-radius: 5px;
+            }
+        }
     }
 
     .footer{
