@@ -223,6 +223,80 @@ body{
     }
 }
 
+.roadmap{
+    background-image: linear-gradient(0deg, rgba(26, 26, 29, .75)  0%, rgba(26, 26, 29, .75) 100%),   url(../assets/images/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFF;
+    padding: 120px 0;
+
+    &__inner{
+        text-align: center;
+    }
+
+    &__title{
+        font-size: 60px;
+        line-height: 150%;
+        font-weight: 700;
+        text-align: center;
+    }
+    
+    &__list{
+        text-align: left;
+        max-width: 1440px;
+        display: flex;
+        flex-direction: column;
+        margin: 64px 0;
+
+
+    }
+
+    &__item{
+        width: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &:nth-child(2n){
+            flex-direction: row-reverse;
+            align-self: end;
+        }
+
+
+        &-img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            &-wrapper{
+                width: 400px;
+                height: 400px;
+            }
+        }
+
+        &-desc{
+            max-width: 380px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        &-title{
+            font-size: 44px;
+            line-height: 72px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        &-text{
+            font-size: 18px;
+            line-height: 180%;
+        }
+    }
+
+    &__btn{
+        width: 412px;
+    }
+}
 
 .eco{
     background-color: #242428;
@@ -616,6 +690,38 @@ body{
         }
     }
 
+    .roadmap{
+        padding: 100px 0;
+        &__title{
+            font-size: 45px;
+            line-height: 120%;
+        }
+        &__list{
+            margin: 40px 0;
+            max-width: 1000px;
+        }
+        &__item{
+            width: 600px;
+            &-img{
+                &-wrapper{
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+            &-title{
+                font-size: 30px;
+                line-height: 40px;
+            }
+            &-text{
+                font-size: 14px;
+                max-width: 280px;
+            }
+        }
+        &__btn{
+            max-width: 340px;
+        }
+    }
+
     .eco{
         padding: 100px 0;
         &__title{
@@ -831,7 +937,7 @@ body{
 
     .banner{
         &__wrapper{
-            padding: 20px 30px;
+            padding: 20px;
         }
         &__text{
             font-size: 60px;
@@ -879,6 +985,42 @@ body{
             &.white-button{
                 padding: 13px;
                 width: 250px;
+            }
+        }
+    }
+
+    .roadmap{
+        padding: 80px 0;
+        &__title{
+            font-size: 32px;
+        }
+        &__list{
+            margin: 20px auto 40px;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 600px;
+        }
+        &__item{
+            display: block;
+            width: 250px;
+            &-img{
+                &-wrapper{
+                    width: 250px;
+                    height: 250px;
+                }
+            }
+            &-desc{
+                max-width: 100%;
+                display: block;
+            }
+            &-title{
+                font-size: 20px;
+                margin: 0 auto;
+            }
+            &-text{
+                text-align: justify;
             }
         }
     }
@@ -1060,6 +1202,32 @@ body{
                 width: 100%;
             }
         }       
+    }
+
+    .roadmap{
+        &__list{
+            display: block;
+        }
+        &__item{
+            text-align: center;
+            width: 100%;
+            &-desc{
+                width: 100%;
+            }
+            &-text{
+                max-width: 400px;
+                text-align: center;
+                margin: 0 auto;
+            }
+            &-img{
+                &-wrapper{
+                    margin: 0 auto;
+                }
+            }
+        }
+        &__btn{
+            max-width: 100%;
+        }
     }
 
     .contacts{
