@@ -223,6 +223,73 @@ body{
     }
 }
 
+
+.eco{
+    background-color: #242428;
+    padding: 120px 0 180px;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+    &__title{
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 150%;
+    }
+
+    &__text{
+        font-size: 24px;
+        line-height: 180%;
+        margin-bottom: 60px;
+    }
+
+    &__inner{
+        position: relative;
+        z-index: 50;
+    }
+
+    &__lock{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(180deg, rgba(36, 36, 40, 0.20) -27.84%, #242428 100%);
+
+        &-desc{
+            margin-top: 20px;
+            font-size: 20px;
+            line-height: 150%;
+            max-width: 470px;
+            text-align: center;
+        }
+    }
+
+    &__platforms{
+        display: flex;
+        max-width: 1320px;
+        height: 330px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    &__platform{
+        background-color: #4C4D54;
+        width: 240px;
+        height: 150px;
+        border-radius: 8px;
+    }
+
+}
+
 .contacts{
     padding: 150px 0;
     background: #1A1A1D;
@@ -549,6 +616,26 @@ body{
         }
     }
 
+    .eco{
+        padding: 100px 0;
+        &__title{
+            font-size: 45px;
+        }
+        &__text{
+            font-size: 20px;
+            margin-bottom: 45px;
+        }
+        &__platforms{
+            max-width: 820px;
+            height: 260px;
+            gap: 20px;
+        }
+        &__platform{
+            width: 190px;
+            height: 120px;
+        }
+    }
+
     .contacts{
         padding: 80px 0;
         &__title{
@@ -793,6 +880,34 @@ body{
                 padding: 13px;
                 width: 250px;
             }
+        }
+    }
+
+    .eco{
+        padding: 80px 0;
+        &__title{
+            font-size: 40px;
+        }
+        &__text{
+            font-size: 18px;
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+        &__lock{
+            background: linear-gradient(180deg, rgba(36, 36, 40, 0.20) -57.84%, #242428 100%);
+            &-desc{
+                font-size: 18px;
+                margin-top: 15px;
+                max-width: 360px;
+            }
+        }
+        &__platforms{
+            max-width: 490px;
+            height: 310px;
+        }
+        &__platform{
+            width: 150px;
+            height: 90px;
         }
     }
 

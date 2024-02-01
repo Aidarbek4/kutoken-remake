@@ -265,6 +265,84 @@ body {
   right: -25%;
 }
 
+.eco {
+  background-color: #242428;
+  padding: 120px 0 180px;
+  color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+.eco__title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 150%;
+}
+.eco__text {
+  font-size: 24px;
+  line-height: 180%;
+  margin-bottom: 60px;
+}
+.eco__inner {
+  position: relative;
+  z-index: 50;
+}
+.eco__lock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-27.84%, rgba(36, 36, 40, 0.2)), to(#242428));
+  background: linear-gradient(180deg, rgba(36, 36, 40, 0.2) -27.84%, #242428 100%);
+}
+.eco__lock-desc {
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 150%;
+  max-width: 470px;
+  text-align: center;
+}
+.eco__platforms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1320px;
+  height: 330px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.eco__platform {
+  background-color: #4C4D54;
+  width: 240px;
+  height: 150px;
+  border-radius: 8px;
+}
+
 .contacts {
   padding: 150px 0;
   background: #1A1A1D;
@@ -655,6 +733,25 @@ body {
     top: 4%;
     right: -20%;
   }
+  .eco {
+    padding: 100px 0;
+  }
+  .eco__title {
+    font-size: 45px;
+  }
+  .eco__text {
+    font-size: 20px;
+    margin-bottom: 45px;
+  }
+  .eco__platforms {
+    max-width: 820px;
+    height: 260px;
+    gap: 20px;
+  }
+  .eco__platform {
+    width: 190px;
+    height: 120px;
+  }
   .contacts {
     padding: 80px 0;
   }
@@ -911,6 +1008,34 @@ body {
   .about__button.white-button {
     padding: 13px;
     width: 250px;
+  }
+  .eco {
+    padding: 80px 0;
+  }
+  .eco__title {
+    font-size: 40px;
+  }
+  .eco__text {
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 500px;
+  }
+  .eco__lock {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(-57.84%, rgba(36, 36, 40, 0.2)), to(#242428));
+    background: linear-gradient(180deg, rgba(36, 36, 40, 0.2) -57.84%, #242428 100%);
+  }
+  .eco__lock-desc {
+    font-size: 18px;
+    margin-top: 15px;
+    max-width: 360px;
+  }
+  .eco__platforms {
+    max-width: 490px;
+    height: 310px;
+  }
+  .eco__platform {
+    width: 150px;
+    height: 90px;
   }
   .contacts__title {
     font-size: 36px;
