@@ -265,6 +265,197 @@ body {
   right: -25%;
 }
 
+.location {
+  background: #FFF;
+  padding: 175px 0 265px;
+}
+.location__map {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.75)), to(rgba(255, 255, 255, 0.75))), url(../images/map.png);
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.75) 100%), url(../images/map.png);
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.location__map-place {
+  background-color: transparent;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  width: 45px;
+  height: 62px;
+}
+.location__map-place.place1 {
+  left: 12%;
+  top: 50%;
+}
+.location__map-place.place2 {
+  left: 14%;
+  top: 12%;
+}
+.location__map-place.place3 {
+  right: 12%;
+  top: 65%;
+}
+.location__map-place.place4 {
+  left: 42%;
+  top: 10%;
+}
+.location__map-place.place5 {
+  right: 25%;
+  top: 25%;
+}
+.location__map-place.visible {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+}
+
+.cards {
+  background: #1A1A1A;
+}
+.cards__list {
+  max-width: 1720px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+  margin: 0 auto;
+}
+.cards .card {
+  display: block;
+  width: 390px;
+  height: 545px;
+  border-radius: 8px;
+  padding: 40px 20px 32px;
+  color: #FFF;
+  margin-top: -130px;
+  margin-bottom: 160px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  position: relative;
+  background: #000;
+}
+.cards .card__inner {
+  position: relative;
+  z-index: 10;
+  -webkit-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+.cards .card__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cards .card__arrow {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+.cards .card__number {
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 68px;
+  line-height: 100%;
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+}
+.cards .card__title {
+  margin: 80px 0 20px;
+  font-size: 32px;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+}
+.cards .card__text {
+  font-size: 18px;
+  line-height: 180%;
+}
+.cards .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../assets/images/card-bg2.jpg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(../assets/images/card-bg2.jpg);
+  border-radius: 8px;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+.cards .card:hover .card__inner {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+.cards .card:hover::before {
+  opacity: 1;
+}
+.cards .card:hover .card__arrow {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.cards .card:hover .card__top {
+  padding-top: -10px;
+}
+
+.advantages {
+  padding: 80px 0;
+  background-color: #fff;
+  color: #282828;
+}
+.advantages__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+.advantages__row + .advantages__row {
+  margin-top: 50px;
+}
+.advantages__card {
+  max-width: 360px;
+}
+.advantages__card-title {
+  font-size: 30px;
+  line-height: 38px;
+  margin-bottom: 16px;
+}
+.advantages__card-text {
+  font-size: 16px;
+  line-height: 22px;
+}
+
 .blog {
   background: #0F0F0F;
   padding: 120px 0 140px;
@@ -390,8 +581,8 @@ body {
   font-size: 18px;
   line-height: 120%;
   margin-top: 16px;
-  -webkit-transition: opacity 0.5s ease 0s;
-  transition: opacity 0.5s ease 0s;
+  -webkit-transition: opacity 1s ease 0s;
+  transition: opacity 1s ease 0s;
   opacity: 0;
 }
 .blog__item:hover {
@@ -965,6 +1156,46 @@ body {
     top: 4%;
     right: -20%;
   }
+  .cards__list {
+    gap: 30px;
+    max-width: 1170px;
+  }
+  .cards .card {
+    max-width: 260px;
+    height: 420px;
+    margin-top: -100px;
+    margin-bottom: 100px;
+  }
+  .cards .card__number {
+    font-size: 50px;
+  }
+  .cards .card__arrow {
+    width: 54px;
+    height: 54px;
+  }
+  .cards .card__title {
+    margin: 30px 0 15px;
+    font-size: 24px;
+    line-height: 120%;
+  }
+  .cards .card__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .advantages__row + .advantages__row {
+    margin-top: 40px;
+  }
+  .advantages__card {
+    max-width: 220px;
+  }
+  .advantages__card-title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .advantages__card-text {
+    font-size: 14px;
+    line-height: 18px;
+  }
   .blog {
     padding: 100px;
   }
@@ -1297,6 +1528,66 @@ body {
     padding: 13px;
     width: 250px;
   }
+  .cards__list {
+    max-width: 100%;
+    gap: 30px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .cards .card {
+    max-width: 340px;
+    height: 340px;
+    padding: 30px 15px;
+    margin-top: -80px;
+  }
+  .cards .card__inner {
+    -webkit-transform: translate(0);
+        -ms-transform: translate(0);
+            transform: translate(0);
+  }
+  .cards .card__number {
+    font-size: 45px;
+    line-height: 45px;
+  }
+  .cards .card__arrow {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    width: 48px;
+    height: 48px;
+  }
+  .cards .card__title {
+    font-size: 32px;
+    margin: 30px 0;
+  }
+  .cards .card__text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .advantages__row {
+    max-width: 530px;
+    gap: 30px;
+    margin: 0 auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .advantages__row + .advantages__row {
+    margin-top: 25px;
+  }
+  .advantages__card {
+    max-width: 250px;
+  }
+  .advantages__card-title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+  .advantages__card-text {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: justify;
+  }
   .blog {
     padding: 80px 0;
   }
@@ -1307,6 +1598,8 @@ body {
     margin-bottom: 40px;
   }
   .blog__title::after {
+    width: 0;
+    height: 0;
     background-image: none;
   }
   .blog__inner {
@@ -1582,6 +1875,9 @@ body {
   .about__button.white-button {
     width: 100%;
   }
+  .cards .card {
+    max-width: 400px;
+  }
   .blog__title {
     font-size: 40px;
   }
@@ -1593,6 +1889,32 @@ body {
   }
   .blog__item-text {
     font-size: 14px;
+  }
+  .advantages__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .advantages__card {
+    max-width: 100%;
+  }
+  .advantages__card-title {
+    max-width: 250px;
+    text-align: center;
+    margin: 0 auto 10px;
+  }
+  .advantages__card-text {
+    max-width: 360px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #0F0F0F;
   }
   .roadmap__list {
     display: block;
