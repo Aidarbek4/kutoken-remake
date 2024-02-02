@@ -6,7 +6,6 @@ const navbarLayer = document.querySelector(".header__navbar");
 crossButton.addEventListener("click", function() {
     crossButton.classList.toggle("active");
     navbarLayer.classList.toggle("active");
-    body.classList.toggle("hidden");
 })
 
 const navbarLinks = document.querySelectorAll(".header__navbar a");
@@ -14,6 +13,5 @@ navbarLinks.forEach((link) => {
     link.addEventListener("click", function(){
         crossButton.classList.remove("active");
         navbarLayer.classList.remove("active");
-        ReportBody.classList.remove("hidden")
     })
 })
