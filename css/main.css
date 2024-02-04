@@ -607,6 +607,113 @@ body {
 .cards .card:hover .card__top {
   padding-top: -10px;
 }
+.cards.technology-cards .card::before {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../assets/images/card-bg.jpg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(../assets/images/card-bg.jpg);
+}
+
+.chapters {
+  background-color: #fff;
+  color: #1A1A1A;
+  padding: 95px 0 125px;
+}
+.chapters__title {
+  font-size: 60px;
+  line-height: 150%;
+  text-align: center;
+  margin-bottom: 80px;
+}
+.chapters__inner {
+  max-width: 1720px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+  margin: 0 auto;
+}
+.chapters .chapter {
+  display: block;
+  width: 390px;
+  height: 545px;
+  border-radius: 8px;
+  padding: 40px 20px 32px;
+  margin-bottom: 40px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  position: relative;
+  background: #fff;
+  border: 1px solid #1A1A1A;
+  color: #1A1A1A;
+}
+.chapters .chapter__inner {
+  position: relative;
+  z-index: 10;
+  -webkit-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+.chapters .chapter__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.chapters .chapter__arrow {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+.chapters .chapter__number {
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 68px;
+  line-height: 100%;
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+}
+.chapters .chapter__title {
+  margin: 80px 0 20px;
+  font-size: 32px;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+}
+.chapters .chapter__text {
+  font-size: 18px;
+  line-height: 180%;
+}
+.chapters .chapter:hover {
+  -webkit-box-shadow: 0 2px 15px 0 #1A1A1A;
+          box-shadow: 0 2px 15px 0 #1A1A1A;
+}
+.chapters .chapter:hover .chapter__inner {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+.chapters .chapter:hover .chapter__arrow {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.chapters .chapter:hover .chapter__top {
+  padding-top: -10px;
+}
 
 .advantages {
   padding: 80px 0;
@@ -1859,6 +1966,38 @@ body {
     font-size: 16px;
     line-height: 24px;
   }
+  .chapters {
+    padding: 80px 0 100px;
+  }
+  .chapters__title {
+    font-size: 45px;
+    margin-bottom: 60px;
+  }
+  .chapters__list {
+    gap: 30px;
+    max-width: 1170px;
+  }
+  .chapters .chapter {
+    max-width: 260px;
+    height: 420px;
+    margin-bottom: 0;
+  }
+  .chapters .chapter__number {
+    font-size: 50px;
+  }
+  .chapters .chapter__arrow {
+    width: 54px;
+    height: 54px;
+  }
+  .chapters .chapter__title {
+    margin: 30px 0 15px;
+    font-size: 24px;
+    line-height: 120%;
+  }
+  .chapters .chapter__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
   .advantages__row + .advantages__row {
     margin-top: 40px;
   }
@@ -2296,6 +2435,49 @@ body {
     font-size: 16px;
     line-height: 22px;
   }
+  .chapters {
+    padding: 80px 0;
+  }
+  .chapters__title {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  .chapters__list {
+    max-width: 100%;
+    gap: 30px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .chapters .chapter {
+    max-width: 340px;
+    height: 340px;
+    padding: 30px 15px;
+  }
+  .chapters .chapter__inner {
+    -webkit-transform: translate(0);
+        -ms-transform: translate(0);
+            transform: translate(0);
+  }
+  .chapters .chapter__number {
+    font-size: 45px;
+    line-height: 45px;
+  }
+  .chapters .chapter__arrow {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    width: 48px;
+    height: 48px;
+  }
+  .chapters .chapter__title {
+    font-size: 32px;
+    margin: 30px 0;
+  }
+  .chapters .chapter__text {
+    font-size: 16px;
+    line-height: 22px;
+  }
   .advantages__row {
     max-width: 530px;
     gap: 30px;
@@ -2614,6 +2796,9 @@ body {
     width: 100%;
   }
   .cards .card {
+    max-width: 400px;
+  }
+  .chapters .chapter {
     max-width: 400px;
   }
   .blog__title {
