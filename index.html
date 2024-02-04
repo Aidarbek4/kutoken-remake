@@ -29,19 +29,19 @@
                     <nav class="header__navbar navbar">
                         <ul class="navbar__list header__navbar-list">
                             <li class="navbar__item header__navbar-item">
-                                <a href="#" class="navbar__link header__navbar-link">О нас</a>
+                                <a href="#about" class="navbar__link header__navbar-link anchor-link">О нас</a>
                             </li>
                             <li class="navbar__item  header__navbar-item">
-                                <a href="#" class="navbar__link header__navbar-link">Токенизированные активы</a>
+                                <a href="#tokens" class="navbar__link header__navbar-link anchor-link">Токенизированные активы</a>
                             </li>
                             <li class="navbar__item  header__navbar-item">
-                                <a href="#" class="navbar__link header__navbar-link">Блог</a>
+                                <a href="#blog" class="navbar__link header__navbar-link anchor-link">Блог</a>
                             </li>
                             <li class="navbar__item  header__navbar-item">
-                                <a href="#" class="navbar__link header__navbar-link">Как приобрести</a>
+                                <a href="#roadmap" class="navbar__link header__navbar-link anchor-link">Дорожная карта</a>
                             </li>
                             <li class="navbar__item  header__navbar-item">
-                                <a href="#" class="navbar__link header__navbar-link">Контакты</a>
+                                <a href="#contacts" class="navbar__link header__navbar-link anchor-link">Контакты</a>
                             </li>
                             <li class="navbar__item  header__navbar-item hidden">
                                 <a href="#" class="navbar__link header__navbar-link">ТОКЕН АКТИВЫ</a>
@@ -67,7 +67,9 @@
                     <p class="home__text">
                         Цифровой токен безопасности для мирового нефтегазового и энергетического сектора
                     </p>
-                    <button class="home__button red-button">Оставить заявку</button>
+                    <a class="anchor-link" href="#contacts">
+                        <button class="home__button red-button">Оставить заявку</button>
+                    </a>
                 </div>
                 <div class="home__video-wrapper active">
                     <video class="home__video station active" autoplay loop>
@@ -124,7 +126,7 @@
         </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <div class="about__inner">
                 <div class="about__content">
@@ -137,17 +139,80 @@
                         Oops... Video is not available 
                     </video>
                     <div class="about__buttons">
-                        <a href="#">
+                        <a class="anchor-link" href="#contacts">
                             <button class="about__button red-button main-button">Связаться</button>
                         </a>
                         <a href="#">
                             <button class="about__button white-button">Белая бумага</button>
                         </a>
-                        <a href="#">
+                        <a class="anchor-link" href="#roadmap">
                             <button class="about__button white-button">Дорожная карта</button>
                         </a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tokens" id="tokens">
+        <div class="container">
+            <h2 class="tokens__title">Активы к токенизаии</h2>
+            <div class="tokens__wrapper">
+                <div class="tokens__inner">
+                    <!-- здесь будет добавлено фото через css  -->
+                </div>
+                <button class="token token-main blue">
+                    <p class="token__name">Наши активы</p>
+                    <p class="token__sum">___ млрд$</p>
+                </button>             
+                <button class="token token1 tk pink">
+                    <p class="token__name">Титан</p>
+                    <p class="token__sum">10 млн$</p>
+                </button>
+                <button class="token token2 tk blue">
+                    <p class="token__name">Металлы</p>
+                    <p class="token__sum">$ 1,140</p>
+                </button>
+                <button class="token token3 tk blue">
+                    <p class="token__name">УВС</p>
+                    <p class="token__sum">545 млн$</p>
+                </button>
+                <button class="token token4 tk pink">
+                    <p class="token__name">Золото</p>
+                    <p class="token__sum">5,73 млрд $</p>
+                </button>
+                <button class="token token5 tk pink">
+                    <p class="token__name">Уран</p>
+                    <p class="token__sum">7.2 млрд $</p>
+                </button>
+                <button class="token token6 tk pink">
+                    <p class="token__name">Цинк</p>
+                    <p class="token__sum">151 млн$</p>
+                </button>
+                <button class="token token7 tk blue">
+                    <p class="token__name">Газ</p>
+                    <p class="token__sum">2.3 млрд $</p>
+                </button>
+                <button class="token token8 tk pink">
+                    <p class="token__name">Подземные воды</p>
+                    <p class="token__sum">70 млн$</p>
+                </button>
+                <button class="token token9 tk blue">
+                    <p class="token__name">Пиритовые огарки</p>
+                    <p class="token__sum">50 млн$</p>
+                </button>
+                <button class="token token10 tk blue">
+                    <p class="token__name">Серебро</p>
+                    <p class="token__sum">16 млн$</p>
+                </button>
+                <button class="token token11 tk blue">
+                    <p class="token__name">Нефть</p>
+                    <p class="token__sum">1,4 млрд $</p>
+                </button>
+                <button class="token token12 tk blue">
+                    <p class="token__name">Молибден</p>
+                    <p class="token__sum">16 млн $</p>
+                </button>
             </div>
         </div>
     </section>
@@ -485,7 +550,7 @@
         </div>
     </section>
 
-    <section class="blog">
+    <section class="blog" id="blog">
         <div class="container">
             <h2 class="blog__title">Блог новостей</h2>
             <div class="blog__inner">
@@ -596,7 +661,9 @@
                     </div>
                 </li>
             </ul>
-            <a href="#"><button class="roadmap__btn red-button">Связаться с KDI</button></a>
+            <a class="anchor-link" href="#contacts">
+                <button class="roadmap__btn red-button">Связаться с KDI</button>
+            </a>
             </div>
         </div>
     </section>
@@ -632,7 +699,7 @@
         </div>
     </section>
 
-    <section class="contacts">
+    <section class="contacts" id="contacts">
         <div class="container">
             <h2 class="contacts__title">Верная стратегия</h2>
             <p class="contacts__text">
@@ -647,12 +714,12 @@
                         </p>
                     </div>
                     <div class="contscts__app-col">
-                        <p class="contacts__app-data">
+                        <a href="mailto:kdi@example.com" class="contacts__app-data">
                             kdi@example.com
-                        </p>
-                        <p class="contacts__app-data">
-                            +7 (219) 555-0114
-                        </p>
+                        </a>
+                        <a href="tel:+7 (219) 555-0114" class="contacts__app-data">
+                            +72195550114
+                        </a>
                     </div>
                 </div>
                 <form action="#" method="post" class="contacts__app-form">
@@ -688,25 +755,25 @@
                     <nav class="footer__navbar navbar">
                         <ul class="navbar__list footer__navbar-list">
                             <li class="navbar__item footer__navbar-item">
-                                <a href="#" class="navbar__link footer__navbar-link">О нас</a>
+                                <a href="#about" class="navbar__link footer__navbar-link anchor-link">О нас</a>
                             </li>
                             <li class="navbar__item  footer__navbar-item">
-                                <a href="#" class="navbar__link footer__navbar-link">Токенизированные активы</a>
+                                <a href="#tokens" class="navbar__link footer__navbar-link anchor-link">Токенизированные активы</a>
                             </li>
                             <li class="navbar__item  footer__navbar-item">
-                                <a href="#" class="navbar__link footer__navbar-link">Блог</a>
+                                <a href="#blog" class="navbar__link footer__navbar-link anchor-link">Блог</a>
                             </li>
                             <li class="navbar__item  footer__navbar-item">
-                                <a href="#" class="navbar__link footer__navbar-link">Как приобрести</a>
+                                <a href="#roadmap" class="navbar__link footer__navbar-link anchor-link">Дорожная карта</a>
                             </li>
                             <li class="navbar__item  footer__navbar-item">
-                                <a href="#" class="navbar__link footer__navbar-link">Контакты</a>
+                                <a href="#contacts" class="navbar__link footer__navbar-link anchor-link">Контакты</a>
                             </li>
                             <li class="navbar__item  footer__navbar-item hidden">
                                 <a href="#" class="navbar__link footer__navbar-link">ТОКЕН АКТИВЫ</a>
                             </li>
-                            <li class="navbar__item  footer__navbar-item animation">
-                                <a href="#" class="navbar__link footer__navbar-link">ТЕХНОЛОГИИ</a>
+                            <li class="navbar__item  footer__navbar-item">
+                                <a href="pages/technologies.html" class="navbar__link footer__navbar-link">ТЕХНОЛОГИИ</a>
                             </li>
                         </ul>
                     </nav>

@@ -175,7 +175,6 @@ body{
         &.earth{
             height: 125%;
             transform: rotate(45deg);
-            z-index: 270;
             top: 0;
             right: -50%;
             transition-delay: 0.5s;
@@ -330,6 +329,183 @@ body{
         top: 6%;
         right: -25%;
     }
+}
+
+.tokens{
+    background-color: #1A1A1D;
+    padding: 80px 0 100px;
+    overflow: hidden;
+
+    &__title{
+        font-size: 60px;
+        line-height: 150%;
+        text-align: center;
+        margin-bottom: 65px;
+        color: #fff;
+    }
+
+    &__wrapper{
+        position: relative;
+        max-width: 1460px;
+        height: 1000px;
+        margin: 0 auto;
+    }
+
+    &__inner{
+        position: absolute;
+        width: 865px;
+        height: 865px;
+        background-image: url(../assets/images/circles.png);
+        background-size: cover;
+        background-position: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .token{
+        position: absolute;
+        color: #fff;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        z-index: 300;
+        padding: 0;
+
+        &__name{
+            font-size: 25px;
+            line-height: 30px;
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        &__sum{
+            font-size: 30px;
+            line-height: 35px;
+            max-width: 90%;
+            margin: 20px auto 0;
+        }
+
+        &.blue{
+            box-shadow: 0px 0px 25px 0px #246CF9;
+            background-image: url(../assets/images/aboveball.png), linear-gradient(0deg, rgba(36, 108, 249, 1) 0%, rgba(36, 108, 249, 1) 100%), url(../assets/images/underball.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        &.pink{
+            box-shadow: 0px 0px 25px 0px #FA2256;
+            background-image: url(../assets/images/aboveball.png),linear-gradient(0deg, rgba(250, 34, 86, 1) 0%, rgba(250, 34, 86, 1) 100%),   url(../assets/images/underball.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        &.token-main{
+            width: 420px;
+            height: 420px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 300;
+
+            .token__name{
+                font-size: 30px;
+                line-height: 35px;
+            }
+
+            .token__sum{
+                font-size: 50px;
+                line-height: 60px;
+            }
+        }
+
+        &.token1{
+            left: 30%;
+            top: 5%;
+        }
+        &.token2{
+            top: 50%;
+            transform: translateY(-50%);
+            left: 15%;
+        }
+        &.token3{
+            left: 30%;
+            bottom: 5%;
+        }
+        &.token4{
+            right: 30%;
+            top: 5%;
+        }
+        &.token5{
+            top: 50%;
+            transform: translateY(-50%);
+            right: 15%;
+        }
+        &.token6{
+            right: 30%;
+            bottom: 5%;
+        }
+        &.token7{
+            top: 0;
+            left: 10%;
+        }
+        &.token8{
+            left: 0;
+            top: 25%;
+        }
+        &.token9{
+            left: 10%;
+            top: 70%;
+        }
+        &.token10{
+            top: 0;
+            right: 10%;
+        }
+        &.token11{
+            right: 0;
+            top: 25%;
+        }
+        &.token12{
+            right: 10%;
+            top: 70%;
+        }
+    }
+
+    .sphere{
+        position: absolute;
+        border-radius: 50%;
+        background-image: url(../assets/images/black-sphere.png);
+        background-position: center;
+        background-size: cover;
+        animation: bounce 5s linear infinite;
+    }
+
+    .sphere:nth-child(4n-2) {
+        animation-delay: 0s;
+      }
+      
+      .sphere:nth-child(4n) {
+        animation-delay: 1s;
+        animation-direction: reverse;
+      }
+      
+      .sphere:nth-child(4n-1) {
+        animation-delay: 2s;
+      }
+      
+      .sphere:nth-child(4n-3) {
+        animation-delay: 3s;
+      }
+      
+      /* Анимация для всех шаров одинаковая */
+      @keyframes bounce {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px); /* Подпрыгивание вверх */
+        }
+      }
 }
 
 .location{
@@ -1397,8 +1573,10 @@ body{
             line-height: 100%;
         }
         &-data{
+            display: block;
             font-size: 22px;
             line-height: 100%;
+            color: #272727;
             &+&{
                 margin-top: 16px;
             }
@@ -1701,6 +1879,47 @@ body{
         &__video{
             top: 4%;
             right: -20%;
+        }
+    }
+
+    .tokens{
+        padding: 80px 0;
+        &__title{
+            font-size: 45px;
+            margin-bottom: 40px;
+        }
+        &__wrapper{
+            max-width: 930px;
+            height: 760px;
+        }
+        &__inner{
+            width: 680px;
+            height: 680px;
+        }
+        .token{
+            &.token-main{
+                width: 300px;
+                height: 300px;
+
+                .token__name{
+                    font-size: 24px;
+                    line-height: 150%;
+                }
+                .token__sum{
+                    font-size: 32px;
+                    line-height: 120%;
+                }
+            }
+
+            &__name{
+                font-size: 16px;
+                line-height: 150%;
+            }
+            &__sum{
+                margin-top: 5px;
+                font-size: 20px;
+                line-height: 150%;
+            }
         }
     }
 
@@ -2174,6 +2393,110 @@ body{
         }
     }
 
+    .tokens{
+        height: auto;
+        &__title{
+            font-size: 32px;
+        }
+        &__inner{
+            display: none;
+        }
+        .sphere{
+            display: none;
+        }
+        &__wrapper{
+            height: auto;
+            max-width: 700px;
+            margin: 0 auto;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .token{
+            border-radius: 5px;
+            background-color: rgba(36, 108, 249, .65);
+            &.pink, &.blue{
+                background-image: none;
+                box-shadow: none;
+            }
+            &.token1, &.token2, &.token3, &.token4, &.token5, &.token6, &.token7, &.token8, &.token9, &.token10, &.token11, &.token12, &.token-main{
+                position: relative;
+                top: auto;
+                bottom: auto;
+                right: auto;
+                left: auto;
+                transform: translateY(0);
+                width: auto;
+                height: auto;
+                padding: 20px;
+                .token__name{
+                    font-size: 12px;
+                    width: auto;
+                }
+                .token__sum{
+                    font-size: 16px;
+                    width: auto;
+                }
+            }
+
+            &.token1{
+                grid-row: 1/2;
+                grid-column: 1/2;
+            }
+            &.token2{
+                grid-row: 1/2;
+                grid-column: 2/3;
+            }
+            &.token3{
+                grid-row: 1/2;
+                grid-column: 3/4;
+            }
+            &.token4{
+                grid-row: 1/2;
+                grid-column: 4/5;
+            }
+            &.token5{
+                grid-row: 2/3;
+                grid-column: 1/2;
+            }
+            &.token6{
+                grid-row: 3/4;
+                grid-column: 1/2;
+            }
+            &.token-main{
+                grid-row: 2/4;
+                grid-column: 2/4;
+            }
+            &.token7{
+                grid-row: 2/3;
+                grid-column: 4/5;
+            }
+            &.token8{
+                grid-row: 3/4;
+                grid-column: 4/5;
+            }
+            &.token9{
+                grid-row: 4/5;
+                grid-column: 1/2;
+
+            }
+            &.token10{
+                grid-row: 4/5;
+                grid-column: 2/3;
+
+            }
+            &.token11{
+                grid-row: 4/5;
+                grid-column: 3/4;
+
+            }
+            &.token12{
+                grid-row: 4/5;
+                grid-column: 4/5;
+            }
+        }
+    }
+
     .location{
         padding: 80px 0 140px;
         &__map{
@@ -2559,6 +2882,20 @@ body{
                 width: 100%;
             }
         }       
+    }
+
+    .tokens{
+        &__wrapper{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .token{
+            margin: 0 auto;
+            &.token1, &.token2, &.token3, &.token4, &.token5, &.token6, &.token7, &.token8, &.token9, &.token10, &.token11, &.token12, &.token-main{
+                max-width: 100%;
+            }
+        }
     }
 
     .cards{

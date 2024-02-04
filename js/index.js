@@ -71,3 +71,90 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    var anchorLinks = document.querySelectorAll('.anchor-link');
+
+    anchorLinks.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            var targetId = link.getAttribute('href').substring(1);
+            var targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Get the 'token__wrapper' element
+    var tokenWrapper = document.querySelector('.tokens__wrapper');
+
+    // Generate a random number of spheres (between 15 and 25)
+    var numberOfSpheres = Math.floor(Math.random() * 21) + 15;
+
+    // Create and append spheres to 'token__wrapper'
+    for (var i = 0; i < numberOfSpheres; i++) {
+        var sphere = document.createElement('div');
+        sphere.classList.add('sphere');
+
+        // Generate random width, height, and z-index
+        var randomWidth = Math.floor(Math.random() * 51) + 25;
+        var randomHeight = Math.floor(Math.random() * 36) + 25;
+        var randomZIndex = Math.floor(Math.random() * 41) + 170;
+
+        // Set styles for the sphere
+        sphere.style.width = randomHeight + 'px';
+        sphere.style.height = randomHeight + 'px';
+        sphere.style.zIndex = randomZIndex;
+
+        // Generate random (x, y) coordinates
+        var randomX = Math.floor(Math.random() * (tokenWrapper.offsetWidth - randomWidth));
+        var randomY = Math.floor(Math.random() * (tokenWrapper.offsetHeight - randomHeight));
+
+        // Set position styles based on random (x, y) coordinates
+        sphere.style.left = randomX + 'px';
+        sphere.style.top = randomY + 'px';
+
+        // Append the sphere to 'token__wrapper'
+        tokenWrapper.appendChild(sphere);
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Get all elements with the class 'tk'
+    var tkElements = document.querySelectorAll('.tk');
+
+    // Loop through each 'tk' element and set random width and height
+    tkElements.forEach(function (tkElement) {
+        // Get the predefined width and height from styles
+        var predefinedWidth = parseFloat(getComputedStyle(tkElement).width);
+        var predefinedHeight = parseFloat(getComputedStyle(tkElement).height);
+
+        // Check window width and scale factor accordingly
+        var windowWidth = window.innerWidth || document.documentElement.clientWidth;
+        var scalingFactor = 1.0; // Default scale factor
+
+        if (windowWidth > 970 && windowWidth <= 1500) {
+            scalingFactor = (Math.random() * 0.4 + 0.8) / 1.5;
+        } else if (windowWidth > 1500) {
+            scalingFactor = Math.random() * 0.4 + 0.8;
+        }
+
+        // Calculate scaled width and height
+        var scaledWidth = predefinedWidth * scalingFactor;
+        var scaledHeight = predefinedHeight * scalingFactor;
+
+        // Set the width and height using the scaled values
+        tkElement.style.width = scaledWidth + 'px';
+        tkElement.style.height = scaledWidth + 'px';
+    });
+});
+
+
+
