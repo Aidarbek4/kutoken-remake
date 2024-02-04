@@ -85,10 +85,12 @@ body{
     }
     &__item{
         position: relative;
+        transition: opacity 0.5s ease-in-out;
         
         &.hidden{
             display: none;
             opacity: 0;
+            pointer-events: none;
         }
         &+&{
             margin-left: 28px;
@@ -117,9 +119,116 @@ body{
 }
 
 .home{
-    background: #242428;
+    background: #1F1F22;
     height: 1000px;
     overflow: hidden;
+    color: #fff;
+    position: relative;
+
+    &__content{
+        position: absolute;
+        z-index: 300;
+        max-width: 780px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 0.5s ease;
+    }
+
+    &__title{
+        font-size: 135px;
+        line-height: 150px;
+        font-weight: 700;
+        transition: 0.5s ease;
+    }
+
+    &__text{
+        margin: 40px 0 60px;
+        font-size: 24px;
+        line-height: 150%;
+        transition: 0.5s ease;
+    }
+    &__button{
+        font-size: 24px;
+        transition: 0.5s ease;
+    }
+    &__video{
+        position: absolute;
+        z-index: 200;
+        transition: 1s ease-in-out;
+        opacity: 0;
+        border: none;
+
+        &.station{
+            height: 93%;
+            bottom: 0;
+            transform: translateX(-25%);
+            right: 0;
+            transition-delay: 0.5s;
+            
+
+            &.active{
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        &.earth{
+            height: 125%;
+            transform: rotate(45deg);
+            z-index: 270;
+            top: 0;
+            right: -50%;
+            transition-delay: 0.5s;
+
+            &.active{
+                top: 0;
+                right: 0;
+                transform: rotate(0);
+                opacity: 1;
+            }
+        }
+    }
+    &__token{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 600;
+        z-index: 250;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+        transform: translate(-150%, -300%);
+
+        &.active{
+            transform: translate(0);
+            opacity: 1;
+        }
+        &-name{
+            font-size: 16px;
+            line-height: 20px;
+        }
+        &-amount{
+            margin-top: 5px;
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+
+        &.token1{
+            top: 24%;
+            right: 32%;
+        }
+
+        &.token2{
+            bottom: 32%;
+            right: 40%;
+        }
+
+        &.token3{
+            top: 35%;
+            right: 7%;
+        }
+    }
 }
 
 .banner{
@@ -437,6 +546,442 @@ body{
         &-text{
             font-size: 16px;
             line-height: 22px;
+        }
+    }
+}
+
+.community{
+    background: #121215;
+    text-align: center;
+    padding: 40px 0 100px;
+    color: #FFF;
+    overflow: hidden;
+
+    &__title{
+        font-size: 60px;
+        line-height: 150%;
+        font-weight: 700;
+        margin-bottom: 65px;
+    }
+
+    &__inner{
+        padding: 260px 0 320px;
+        position: relative;
+        max-width: 1460px;
+        margin: 0 auto;
+    }
+
+    .percent{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-family: "Inter", sans-serif;
+        background-color: #282C38;
+        color: #757B8C;
+        width: 45px;
+        height: 45px;
+        z-index: 100;
+    }
+
+    &__wrapper{     
+        position: relative;
+        width: 385px;
+        height: 385px;
+        background: url(../assets/images/community-bg.png);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    &__center{
+        position: relative;
+        box-shadow: 0px 0px 33.895px 0px #FA2256;
+        width: 230px;
+        height: 230px;
+        background: url(../assets/images/aboveball.png), linear-gradient(0deg, rgba(250, 34, 86, .75) 0%, rgba(250, 34, 86, .75) 100%), url(../assets/images/underball.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 500;
+
+        &-text{
+            height: 145px;
+            width: 145px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 2px solid #757B8C;
+            background-color: #1E1F25;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+
+            &+&{
+                margin-top: 5px;
+            }
+        }
+
+        &-ball{
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0px 0px 34px 0px #246CF9;
+            background: url(../assets/images/aboveball.png), linear-gradient(0deg, rgba(36, 108, 249, .75) 0%, rgba(36, 108, 249, .75) 100%), url(../assets/images/underball.png);
+            background-position: center;
+            background-size: cover;
+            z-index: 400;
+
+            &-title{
+                font-size: 13px;
+                font-weight: 400;
+                margin-top: 7px;
+            }
+
+            .ball-node{
+                position: absolute;
+                height: 68px;
+                width: 68px;
+                box-shadow: 0px 0px 25px 0px #30E0A1;
+                border-radius: 50%;
+                box-shadow: 0 0 34px 0 #30E0A1;
+                background: url(../assets/images/aboveball.png), linear-gradient(0deg, rgba(48, 224, 161, .75) 0%, rgba(48, 224, 161, .75) 100%), url(../assets/images/underball.png);
+                background-position: center;
+                background-size: cover;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &__text{
+                    height: 52px;
+                    width: 52px;
+                    border-radius: 50%;
+                    border: 2px solid #757B8C;
+                    background: #282C38;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            &.ball-top{
+                top: -65%;
+                left: 50%;
+                transform: translateX(-50%);
+
+                &::after{
+                    position: absolute;
+                    content: "";
+                    width: 3px;
+                    height: 200px;
+                    background: #246CF9;
+                    z-index: -1;
+                    top: 100%;
+                    left: 50%;
+                }
+
+                .ball-node{
+                    bottom: -150%;
+                    &.ball-node1{
+                        left: -150%;
+                        
+                        &::after{
+                            position: absolute;
+                            content: "";
+                            width: 145.5px;
+                            height: 2px;
+                            background: #246CF9;
+                            transform: rotate(-15deg);
+                            left: 80%;
+                            top: 15%;
+                            z-index: -1;
+                        }
+
+                        .percent1{
+                            top: -150%;
+                            left: 65%;
+                        }
+
+                        .percent2{
+                            top: -120%;
+                            right: 200%;
+                        }
+
+                        .percent3{
+                            bottom: -150%;
+                            right: 30%;
+                        }
+                    }
+                    &.ball-node2{
+                        right: -150%;
+                        &::after{
+                            position: absolute;
+                            content: "";
+                            width: 145.5px;
+                            height: 2px;
+                            background: #246CF9;
+                            transform: rotate(15deg);
+                            right: 80%;
+                            top: 15%;
+                            z-index: -1;
+                        }
+
+                        .percent1{
+                            top: -150%;
+                            right: 65%;
+                        }
+
+                        .percent2{
+                            top: -120%;
+                            left: 200%;
+                        }
+
+                        .percent3{
+                            bottom: -150%;
+                            left: 30%;
+                        }
+                    }
+                }
+            }
+
+            &.ball-bottom{
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -65%;
+                
+                &::after{
+                    position: absolute;
+                    content: "";
+                    width: 3px;
+                    height: 200px;
+                    background: #246CF9;
+                    z-index: -1;
+                    bottom: 100%;
+                    left: 50%;
+                }
+            }
+
+            &.ball-left{
+                top: 50%;
+                transform: translateY(-50%);
+                left: -65%;
+
+                &::after{
+                    position: absolute;
+                    content: "";
+                    width: 200px;
+                    height: 3px;
+                    background: #246CF9;
+                    z-index: -1;
+                    left: 100%;
+                    top: 50%;
+                }
+
+                .ball-node{
+                    width: 135px;
+                    height: 135px;
+                    &__text{
+                        width: 105px;
+                        height: 105px;
+                    }
+                    
+                    &.ball-node1{
+                        top: -800%;
+                        left: -150%;
+
+                        
+                        &::after{
+                            position: absolute;
+                            content: "";
+                            width: 58px;
+                            height: 2px;
+                            background: #246CF9;
+                            transform: rotate(60deg);
+                            bottom: -2%;
+                            right: -20%;
+                            z-index: -1;
+                        }
+                        
+                        .percent1{
+                            top: -55%;
+                            right: 5%;
+                        }
+
+                        .percent2{
+                            top: -90%;
+                            left: -20%;
+                        }
+
+                        .percent3{
+                            bottom: 15%;
+                            left: -60%;
+                        }
+
+                        .percent4{
+                            bottom: -70%;
+                            left: 5%;
+                        }
+                    }
+                    &.ball-node2{
+                        bottom: -1000%;
+
+                        &::after{
+                            position: absolute;
+                            content: "";
+                            width: 2px;
+                            height: 80px;
+                            background: #246CF9;
+                            top: -58%;
+                            z-index: -1;
+                        }
+                        
+                        .percent1{
+                            top: -5%;
+                            left: -50%;
+                        }
+
+                        .percent2{
+                            bottom: -65%;
+                            left: -65%;
+                        }
+
+                        .percent3{
+                            bottom: -80%;
+                            right: -25%;
+                        }
+
+                        .percent4{
+                            bottom: 10%;
+                            right: -95%;
+                        }
+                    }
+                }
+            }
+
+            &.ball-right{
+                top: 50%;
+                transform: translateY(-50%);
+                right: -65%;
+
+                &::after{
+                    position: absolute;
+                    content: "";
+                    width: 200px;
+                    height: 3px;
+                    background: #246CF9;
+                    z-index: -10;
+                    right: 100%;
+                    top: 50%;
+                }
+
+                .ball-node{   
+                    width: 135px;
+                    height: 135px;
+                    &__text{
+                        width: 105px;
+                        height: 105px;
+                    }
+                    
+                    &.ball-node1{
+                        right: -100%;
+                        top: -800%;
+
+                        &::after{
+                            position: absolute;
+                            content: "";
+                            width: 65px;
+                            height: 2px;
+                            background: #246CF9;
+                            transform: rotate(-60deg);
+                            bottom: -7%;
+                            left: -20%;
+                            z-index: -1;
+                        }
+
+                        .percent1{
+                            top: -55%;
+                            left: 5%;
+                        }
+
+                        .percent2{
+                            top: -90%;
+                            right: -20%;
+                        }
+
+                        .percent3{
+                            bottom: 15%;
+                            right: -60%;
+                        }
+
+                        .percent4{
+                            bottom: -70%;
+                            right: 5%;
+                        }
+                    }
+                    &.ball-node2{
+                        bottom: -1000%;
+                        
+                        &::after{
+                            position: absolute;
+                            content: "";
+                            width: 2px;
+                            height: 80px;
+                            background: #246CF9;
+                            top: -58%;
+                            z-index: -1;
+                        }
+
+                        .percent1{
+                            top: -5%;
+                            right: -50%;
+                        }
+
+                        .percent2{
+                            bottom: -65%;
+                            right: -65%;
+                        }
+
+                        .percent3{
+                            bottom: -80%;
+                            left: -25%;
+                        }
+
+                        .percent4{
+                            bottom: 10%;
+                            left: -95%;
+                        }
+                    }
+                }
+            }
+
+            .ball-inner{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                z-index: 300px;
+
+                .ball-node{
+                    position: absolute;
+                }
+            }
         }
     }
 }
@@ -990,6 +1535,23 @@ body{
         }
     }
 
+    .home{
+        height: 800px;
+        &__content{
+            max-width: 620px;
+        }
+        &__title{
+            font-size: 90px;
+            line-height: 120%;
+        }
+        &__text{
+            font-size: 20px;
+        }
+        &__token{
+            display: none;
+        }
+    }
+
     .banner{
         &__wrapper{
             padding: 25px 35px;
@@ -1293,7 +1855,7 @@ body{
             display: none;
             opacity: 0;
             position: absolute;
-            z-index: 300;
+            z-index: -10;
             top: 0;
             left: 0;
             width: 100vw;
@@ -1306,6 +1868,7 @@ body{
 
             &.active{
                 opacity: 1;
+                z-index: 500;
                 display: block;
             }
 
@@ -1331,7 +1894,7 @@ body{
         &__menu{
             &-wrapper{
                 position: absolute;
-                z-index: 500;
+                z-index: 600;
                 right: 20px;
                 top: 50%;
                 transform: translateY(-50%);
@@ -1388,6 +1951,42 @@ body{
             font-size: 24px;
             padding: 16px 32px;
             max-width: 540px;
+        }
+    }
+
+    .home{
+        height: auto;
+        &__content{
+            text-align: center;
+            position: relative;
+            padding: 120px 0 0;
+            transform: translate(0);
+            margin: 0 auto;
+        }
+        &__title{
+            font-size: 70px;
+            line-height: 90%;
+        }
+        &__text{
+            font-size: 16px;
+            line-height: 24px;
+            margin: 20px 0 40px;
+        }
+        &__video{
+            position: absolute;
+            width: 150%;
+            bottom: 0;
+            &-wrapper{
+                width: 100%;
+                position: relative;
+                height: 400px;
+                display: none;
+
+                &.active{
+                    display: block;
+                }
+            }
+            
         }
     }
 
@@ -1746,6 +2345,16 @@ body{
         }
         &__button{
             font-size: 14px;
+            width: 100%;
+        }
+    }
+
+    .home{
+        &__content{
+            padding: 80px 0 0;
+            text-align: left;
+        }
+        &__button{
             width: 100%;
         }
     }
