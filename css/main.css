@@ -613,8 +613,8 @@ body {
   opacity: 0;
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
-  width: 45px;
-  height: 52px;
+  width: 24px;
+  height: 30px;
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 200;
@@ -633,24 +633,52 @@ body {
   opacity: 1;
 }
 .location__map-place.place1 {
-  left: 15%;
-  bottom: 40%;
+  right: 37%;
+  top: 21%;
 }
 .location__map-place.place2 {
-  left: 14%;
-  bottom: 80%;
+  right: 42%;
+  top: 16%;
 }
 .location__map-place.place3 {
-  right: 12%;
-  bottom: 23%;
+  right: 39%;
+  top: 18%;
 }
 .location__map-place.place4 {
-  left: 42%;
-  bottom: 76%;
+  right: 38%;
+  top: 23%;
 }
 .location__map-place.place5 {
-  right: 37%;
-  bottom: 70%;
+  right: 36.5%;
+  top: 27%;
+}
+.location__map-place.place6 {
+  top: 20%;
+  right: 41%;
+}
+.location__map-place.place7 {
+  right: 39.5%;
+  top: 25.2%;
+}
+.location__map-place.place8 {
+  top: 37%;
+  right: 29%;
+}
+.location__map-place.place9 {
+  top: 53%;
+  right: 46.5%;
+}
+.location__map-place.place10 {
+  right: 48%;
+  top: 58%;
+}
+.location__map-place.place11 {
+  right: 50%;
+  top: 61%;
+}
+.location__map-place.place12 {
+  right: 49%;
+  top: 64%;
 }
 .location__map-place.visible {
   opacity: 1;
@@ -665,41 +693,6 @@ body {
   transition: 0.5s transform;
   transition: 0.5s transform, 0.5s -webkit-transform;
   position: absolute;
-}
-.location__map-place .place__desc {
-  margin-top: 10px;
-  width: 230px;
-  height: 420px;
-  background-color: #fbfbfb;
-  border-radius: 5px;
-  overflow: hidden;
-  -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  display: none;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-.location__map-place .place__desc:hover {
-  display: block;
-}
-.location__map-place .place__country {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 10px;
-  height: 60px;
-}
-.location__map-place .place__flag {
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.location__map-place .place__flag img {
-  height: 100%;
 }
 
 .cards {
@@ -1771,8 +1764,8 @@ body {
     max-width: 930px;
   }
   .location .place {
-    width: 32px;
-    height: 40px;
+    width: 16px;
+    height: 20px;
   }
   .location .place__desc {
     height: 280px;
@@ -2362,8 +2355,8 @@ body {
     max-width: 630px;
   }
   .location .place {
-    width: 24px;
-    height: 28px;
+    width: 12px;
+    height: 15px;
   }
   .location .place__desc {
     position: absolute;
@@ -2814,6 +2807,10 @@ body {
   }
   .tokens .token.token1 .token__sum, .tokens .token.token2 .token__sum, .tokens .token.token3 .token__sum, .tokens .token.token4 .token__sum, .tokens .token.token5 .token__sum, .tokens .token.token6 .token__sum, .tokens .token.token7 .token__sum, .tokens .token.token8 .token__sum, .tokens .token.token9 .token__sum, .tokens .token.token10 .token__sum, .tokens .token.token11 .token__sum, .tokens .token.token12 .token__sum, .tokens .token.token-main .token__sum {
     font-size: 20px;
+  }
+  .location .place {
+    width: 9px;
+    height: 12px;
   }
   .cards .card {
     max-width: 400px;

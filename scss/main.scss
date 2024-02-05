@@ -543,8 +543,8 @@ body{
             position: absolute;
             opacity: 0;
             transition: opacity 0.5s ease;
-            width: 45px;
-            height: 52px;
+            width: 24px;
+            height: 30px;
             object-fit: cover;
             z-index: 200;
             transition: 0.5s transform;
@@ -558,24 +558,52 @@ body{
             }
 
             &.place1{
-                left: 15%;
-                bottom: 40%;
+                right: 37%;
+                top: 21%;
             }
             &.place2{
-                left: 14%;
-                bottom: 80%;
+                right: 42%;
+                top: 16%;
             }
             &.place3{
-                right: 12%;
-                bottom: 23%;
+                right: 39%;
+                top: 18%;
             }
             &.place4{
-                left: 42%;
-                bottom: 76%;
+                right: 38%;
+                top: 23%;
             }
             &.place5{
-                right: 37%;
-                bottom: 70%;
+                right: 36.5%;
+                top: 27%;
+            }
+            &.place6{
+                top: 20%;
+                right: 41%;
+            }
+            &.place7{
+                right: 39.5%;
+                top: 25.2%;
+            }
+            &.place8{
+                top: 37%;
+                right: 29%;
+            }
+            &.place9{
+                top: 53%;
+                right: 46.5%;
+            }
+            &.place10{
+                right: 48%;
+                top: 58%;
+            }
+            &.place11{
+                right: 50%;
+                top: 61%;
+            }
+            &.place12{
+                right: 49%;
+                top: 64%;
             }
             &.visible {
                 opacity: 1;
@@ -586,36 +614,35 @@ body{
             .place{
                 transition: 0.5s transform;
                 position: absolute;
-                &__desc{
-                    margin-top: 10px;
-                    width: 230px;
-                    height: 420px;
-                    background-color: #fbfbfb;
-                    border-radius: 5px;
-                    overflow: hidden;
-                    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .1);
-                    opacity: 0;
-                    display: none;
-                    transition: 0.5s ease;
+                // &__desc{
+                //     margin-top: 10px;
+                //     width: 230px;
+                //     height: 420px;
+                //     background-color: #fbfbfb;
+                //     border-radius: 5px;
+                //     overflow: hidden;
+                //     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .1);
+                //     opacity: 0;
+                //     display: none;
+                //     transition: 0.5s ease;
 
-                    &:hover{
-                        display: block;
-                    }
-                }
-                &__country{
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-                    height: 60px;
-                }
-                &__flag{
-                    height: 100%;
-                    object-fit: cover;
-                    img{
-                        height: 100%;
-                    }
-                }
-                
+                //     &:hover{
+                //         display: block;
+                //     }
+                // }
+                // &__country{
+                //     display: flex;
+                //     align-items: center;
+                //     gap: 10px;
+                //     height: 60px;
+                // }
+                // &__flag{
+                //     height: 100%;
+                //     object-fit: cover;
+                //     img{
+                //         height: 100%;
+                //     }
+                // }               
             }
         }     
     }
@@ -1575,9 +1602,8 @@ body{
             max-width: 930px;
         }
         .place{
-            width: 32px;
-            height: 40px;
-
+            width: 16px;
+            height: 20px;
             &__desc{
                 height: 280px;
                 width: 150px;
@@ -2186,8 +2212,8 @@ body{
             max-width: 630px;
         }
         .place{
-            width: 24px;
-            height: 28px;
+            width: 12px;
+            height: 15px;
 
             &__desc{
                 position: absolute;
@@ -2612,6 +2638,13 @@ body{
                     font-size: 20px;
                 }
             }
+        }
+    }
+
+    .location{
+        .place{
+            width: 9px;
+            height: 12px;
         }
     }
 
