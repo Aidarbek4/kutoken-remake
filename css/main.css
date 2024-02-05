@@ -580,7 +580,19 @@ body {
 
 .location {
   background: #FFF;
+}
+.location__inner {
+  position: relative;
   padding: 175px 0 265px;
+}
+.location__link {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  color: #246CF9;
+  font-size: 20px;
+  line-height: 150%;
+  z-index: 250;
 }
 .location__map {
   position: relative;
@@ -2148,7 +2160,7 @@ body {
     font-size: 20px;
     line-height: 150%;
   }
-  .location {
+  .location__inner {
     padding: 120px 0 200px;
   }
   .location__map {
@@ -2684,6 +2696,13 @@ body {
   .tokens .token.token-main {
     grid-row: 2/4;
     grid-column: 2/4;
+    background-color: rgba(250, 34, 86, 0.65);
+  }
+  .tokens .token.token-main .token__name {
+    font-size: 16px;
+  }
+  .tokens .token.token-main .token__sum {
+    font-size: 24px;
   }
   .tokens .token.token7 {
     grid-row: 2/3;
@@ -2709,7 +2728,7 @@ body {
     grid-row: 4/5;
     grid-column: 4/5;
   }
-  .location {
+  .location__inner {
     padding: 80px 0 140px;
   }
   .location__map {
@@ -3130,13 +3149,22 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 100%;
+    margin: 0 auto;
+    max-width: 400px;
   }
   .tokens .token {
     margin: 0 auto;
   }
   .tokens .token.token1, .tokens .token.token2, .tokens .token.token3, .tokens .token.token4, .tokens .token.token5, .tokens .token.token6, .tokens .token.token7, .tokens .token.token8, .tokens .token.token9, .tokens .token.token10, .tokens .token.token11, .tokens .token.token12, .tokens .token.token-main {
     max-width: 100%;
+    min-height: 100px;
+    margin: 0;
+  }
+  .tokens .token.token1 .token__name, .tokens .token.token2 .token__name, .tokens .token.token3 .token__name, .tokens .token.token4 .token__name, .tokens .token.token5 .token__name, .tokens .token.token6 .token__name, .tokens .token.token7 .token__name, .tokens .token.token8 .token__name, .tokens .token.token9 .token__name, .tokens .token.token10 .token__name, .tokens .token.token11 .token__name, .tokens .token.token12 .token__name, .tokens .token.token-main .token__name {
+    font-size: 16px;
+  }
+  .tokens .token.token1 .token__sum, .tokens .token.token2 .token__sum, .tokens .token.token3 .token__sum, .tokens .token.token4 .token__sum, .tokens .token.token5 .token__sum, .tokens .token.token6 .token__sum, .tokens .token.token7 .token__sum, .tokens .token.token8 .token__sum, .tokens .token.token9 .token__sum, .tokens .token.token10 .token__sum, .tokens .token.token11 .token__sum, .tokens .token.token12 .token__sum, .tokens .token.token-main .token__sum {
+    font-size: 20px;
   }
   .cards .card {
     max-width: 400px;

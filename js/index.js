@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var tokenWrapper = document.querySelector('.tokens__wrapper');
 
     // Generate a random number of spheres (between 15 and 25)
-    var numberOfSpheres = Math.floor(Math.random() * 21) + 15;
+    var numberOfSpheres = Math.floor(Math.random() * 26) + 15;
 
     // Create and append spheres to 'token__wrapper'
     for (var i = 0; i < numberOfSpheres; i++) {
@@ -132,29 +132,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Loop through each 'tk' element and set random width and height
     tkElements.forEach(function (tkElement) {
-        // Get the predefined width and height from styles
-        var predefinedWidth = parseFloat(getComputedStyle(tkElement).width);
-        var predefinedHeight = parseFloat(getComputedStyle(tkElement).height);
-
-        // Check window width and scale factor accordingly
+        // Check window width
         var windowWidth = window.innerWidth || document.documentElement.clientWidth;
-        var scalingFactor = 1.0; // Default scale factor
+            var predefinedWidth = parseFloat(getComputedStyle(tkElement).width);
+            var predefinedHeight = parseFloat(getComputedStyle(tkElement).height);
 
-        if (windowWidth > 970 && windowWidth <= 1500) {
-            scalingFactor = (Math.random() * 0.4 + 0.8) / 1.5;
-        } else if (windowWidth > 1500) {
-            scalingFactor = Math.random() * 0.4 + 0.8;
-        }
+            // Set default scaling factor
+            var scalingFactor = 1.0;
 
-        // Calculate scaled width and height
-        var scaledWidth = predefinedWidth * scalingFactor;
-        var scaledHeight = predefinedHeight * scalingFactor;
+            // Adjust scaling factor based on window width
+            if (windowWidth > 970 && windowWidth <= 1500) {
+                scalingFactor = (Math.random() * 0.4 + 0.8) / 1.5;
 
-        // Set the width and height using the scaled values
-        tkElement.style.width = scaledWidth + 'px';
-        tkElement.style.height = scaledWidth + 'px';
+                var scaledWidth = predefinedWidth * scalingFactor;
+                var scaledHeight = predefinedHeight * scalingFactor;
+
+                // Set the width and height using the scaled values
+                tkElement.style.width = scaledWidth + 'px';
+                tkElement.style.height = scaledHeight + 'px';
+            } else if (windowWidth > 1500) {
+                scalingFactor = Math.random() * 0.4 + 0.8;
+
+                var scaledWidth = predefinedWidth * scalingFactor;
+                var scaledHeight = predefinedHeight * scalingFactor;
+
+                // Set the width and height using the scaled values
+                tkElement.style.width = scaledWidth + 'px';
+                tkElement.style.height = scaledHeight + 'px';
+            } else{
+                tkElement.removeAttribute("style")
+            }
+        
     });
 });
+
 
 
 
