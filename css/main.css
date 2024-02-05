@@ -594,6 +594,9 @@ body {
   line-height: 150%;
   z-index: 250;
 }
+.location__link:hover {
+  text-decoration: underline;
+}
 .location__map {
   position: relative;
   max-width: 1440px;
@@ -1198,6 +1201,45 @@ body {
 }
 .roadmap__btn {
   width: 412px;
+}
+
+.road-map {
+  padding: 120px;
+  background-image: url(../assets/images/black-map.png);
+  background-color: #1B1B1E;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  color: #fff;
+}
+.road-map__title {
+  font-size: 60px;
+  line-height: 150%;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.road-map__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 60px;
+}
+.road-map__item {
+  width: 480px;
+}
+.road-map__item-title {
+  font-size: 32px;
+  line-height: 120%;
+  margin-bottom: 15px;
+}
+.road-map__item-text {
+  font-size: 15px;
+  line-height: 150%;
 }
 
 .eco {
@@ -1871,6 +1913,25 @@ body {
   .roadmap__btn {
     max-width: 340px;
   }
+  .road-map {
+    padding: 100px;
+  }
+  .road-map__title {
+    font-size: 45px;
+    margin-bottom: 40px;
+  }
+  .road-map__inner {
+    gap: 40px;
+  }
+  .road-map__item {
+    width: 300px;
+  }
+  .road-map__item-title {
+    font-size: 24px;
+  }
+  .road-map__item-text {
+    font-size: 12px;
+  }
   .eco {
     padding: 100px 0;
   }
@@ -2511,6 +2572,21 @@ body {
   .roadmap__item-text {
     text-align: justify;
   }
+  .road-map {
+    padding: 80px 0;
+  }
+  .road-map__title {
+    font-size: 32px;
+  }
+  .road-map__inner {
+    gap: 20;
+  }
+  .road-map__item {
+    width: 400px;
+  }
+  .road-map__item-title {
+    font-size: 20px;
+  }
   .eco {
     padding: 80px 0;
   }
@@ -2803,6 +2879,15 @@ body {
   }
   .roadmap__btn {
     max-width: 100%;
+  }
+  .road-map__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .road-map__item {
+    width: 100%;
   }
   .contacts__title {
     font-size: 32px;
