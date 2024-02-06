@@ -45,20 +45,22 @@ document.addEventListener('DOMContentLoaded', function () {
                 token.classList.add('active');
             });
 
-            homeTitle.style.transition = 'opacity 1s';
-            homeTitle.style.opacity = '1';
+            // Smoothly fade out and update text content
+            homeTitle.style.transition = 'opacity 0.5s';
+            homeTitle.style.opacity = '0';
 
-            homeText.style.transition = 'opacity 1s';
-            homeText.style.opacity = '1';
+            homeText.style.transition = 'opacity 0.5s';
+            homeText.style.opacity = '0';
 
-            homeButton.style.transition = 'opacity 1s';
-            homeButton.style.opacity = '1';
+            homeButton.style.transition = 'opacity 0.5s';
+            homeButton.style.opacity = '0';
 
             setTimeout(function () {
                 homeTitle.innerHTML = "Kut <br>Token";
-                homeText.textContent = "Цифровой токен безопасности для мирового нефтегазового и энергетического сектора";
+                homeText.innerHTML = "Мировой лидер в токенизации энергоресурсов и высокотехнологических произсводств <br>Владеет 23 месторождениями в более чем 12 стран с общей капитализацией 17.5 млрд$";
                 homeButton.textContent = "Оставить заявку";
 
+                // Smoothly fade in the updated text content
                 homeTitle.style.opacity = '1';
                 homeText.style.opacity = '1';
                 homeButton.style.opacity = '1';
